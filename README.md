@@ -40,24 +40,30 @@ http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=08052aba
 {"_id":"1","編號":"1","案類":"自行車竊盜","發生(現)日期":"1020630","發生時段":"13~15","發生(現)地點":"台北市松山區三民路151 ~ 180號"}
 
 TABLEs in SQLite:
-CASE_ISSUE
-id              integer
-case_id         integer
-stolen_date     TEXT
-time_id		    integer
-dict_id         integer
-location        TEXT
-Lat             REAL
-Lng             REAL
+CREATE TABLE IF NOT EXISTS CASE_ISSUE (
+    id              INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, 
+    case_id         INTEGER,
+    stolen_date     TEXT,
+    time_id         INTEGER,
+    dict_id         INTEGER,
+    location        TEXT,
+    Lat             REAL,
+    Lng             REAL
+);
 
-CASE_INFO
-id              integer
-desc            TEXT
+CREATE TABLE CASE_INFO (
+    id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    desc    TEXT UNIQUE
+);
 
-TIME_INFO
-id              integer
-zone            TEXT
+CREATE TABLE TIME_INFO (
+    id      INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    zone    TEXT UNIQUE
+);
 
-DICT_INFO
-id              integer
-dict            TEXT
+CREATE TABLE DICT_INFO (
+    id          INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    title       TEXT UNIQUE,
+    Lat         REAL,
+    Lng         REAL    
+);
