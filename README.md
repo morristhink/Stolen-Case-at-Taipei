@@ -38,3 +38,26 @@ http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=5928460b
 http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=08052aba-d76d-4b25-93f7-e19cec685f5a
 -- Sample data
 {"_id":"1","編號":"1","案類":"自行車竊盜","發生(現)日期":"1020630","發生時段":"13~15","發生(現)地點":"台北市松山區三民路151 ~ 180號"}
+
+TABLEs @ SQLite:
+CASE_ISSUE
+id              integer
+case_id         integer
+stolen_date     TEXT
+time_id		    integer
+dict_id         integer
+location        TEXT
+Lat             REAL
+Lng             REAL
+
+CASE_INFO
+id              integer
+desc            TEXT
+
+TIME_INFO
+id              integer
+zone            TEXT
+
+DICT_INFO
+id              integer
+dict            TEXT
