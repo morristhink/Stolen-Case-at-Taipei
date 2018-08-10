@@ -15,10 +15,6 @@ ctx.verify_mode = ssl.CERT_NONE
 conn = sqlite3.connect('TaipeiCase.sqlite')
 cur = conn.cursor()
 
-# 目前測試階段先清空資料庫
-# 之後應該要研究, 在回傳一堆重複資料時, 如何只insert新資料
-
-
 #call taipei city gov. api - 汽車
 urlcar = 'http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=5928460b-ee8d-4323-b6ac-ad975dbb84c3'
 #call taipei city gov. api - 往宅
