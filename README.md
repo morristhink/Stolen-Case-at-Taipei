@@ -39,7 +39,7 @@ http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=08052aba
 -- Sample data
 {"_id":"1","編號":"1","案類":"自行車竊盜","發生(現)日期":"1020630","發生時段":"13~15","發生(現)地點":"台北市松山區三民路151 ~ 180號"}
 
-TABLEs @ SQLite:
+TABLEs in SQLite:
 CASE_ISSUE
 id              integer
 case_id         integer
